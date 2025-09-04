@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titleText {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceAndFavorite {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.priceAndFavorite.bottom {
+  margin-top: 8px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+
+.ratingText {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ratingText:hover {
+  text-decoration: none;
+}
+
+.locationIcon {
+  margin-left: 16px;
+}

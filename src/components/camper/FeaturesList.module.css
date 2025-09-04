@@ -1,0 +1,10 @@
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.limitRows {
+  max-height: calc(2 * (48px + 8px)); /* 2 rows: (feature height + gap) * 2 */
+  overflow: hidden;
+}

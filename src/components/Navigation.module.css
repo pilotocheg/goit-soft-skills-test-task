@@ -1,0 +1,60 @@
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #f2f4f7;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  color: #101828;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.logoHighlight {
+  color: #475467;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  color: #101828;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #e44d26;
+}
+
+.link:global(.active) {
+  color: #e44d26;
+  font-weight: 600;
+}
