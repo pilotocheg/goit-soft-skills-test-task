@@ -12,33 +12,33 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
+const initialState = {
+  items: [],
+  allItemsLoaded: false,
+  currentCamper: null,
+  loading: false,
+  error: null,
+};
+
 const campersSlice = createSlice({
   name: "campers",
-  initialState: {
-    items: [],
-    allItemsLoaded: false,
-    currentCamper: null,
-    loading: false,
-    error: null,
-  },
+  initialState,
   reducers: {
-    clearCurrentCamper: (state) => {
-      state.currentCamper = null;
+    resetCamperState: () => initialState,
+    resetError: (state) => {
+      state.error = null;
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(getCampers.pending, handlePending)
       .addCase(getCampers.fulfilled, (state, action) => {
+        const { items, total, reset } = action.payload;
+
         state.loading = false;
-        const { items, allItemsLoaded, reset } = action.payload;
-        if (reset) {
-          state.items = items;
-          state.allItemsLoaded = false;
-        } else {
-          state.items = [...state.items, ...items];
-          state.allItemsLoaded = allItemsLoaded;
-        }
+        const newItems = reset ? items : [...state.items, ...items];
+        state.items = newItems;
+        state.allItemsLoaded = total <= newItems.length;
       })
       .addCase(getCampers.rejected, handleRejected)
       .addCase(getCamperDetails.pending, handlePending)
@@ -50,5 +50,6 @@ const campersSlice = createSlice({
   },
 });
 
-export const { clearCurrentCamper } = campersSlice.actions;
+export const { resetCamperState, resetError } = campersSlice.actions;
+
 export default campersSlice.reducer;

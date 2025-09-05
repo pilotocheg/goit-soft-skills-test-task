@@ -1,0 +1,29 @@
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  gap: 40px;
+}
+
+.tab {
+  padding-bottom: 24px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  border-bottom: 5px solid transparent;
+  transition: border-color 0.3s ease;
+  margin-bottom: -3px;
+  position: relative;
+  z-index: 1;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.tab:not(.tabActive):hover {
+  border-bottom-color: var(--color-primary-hover);
+}
+
+.tab.tabActive {
+  border-bottom-color: var(--color-primary);
+}

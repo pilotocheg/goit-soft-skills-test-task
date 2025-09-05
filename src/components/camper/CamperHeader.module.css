@@ -14,7 +14,7 @@
 .titleRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .priceAndFavorite {
@@ -42,10 +42,10 @@
 .ratingText {
   text-decoration: underline;
   cursor: pointer;
-}
 
-.ratingText:hover {
-  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .locationIcon {

@@ -3,7 +3,7 @@ import clsx from "clsx";
 import FeatureLabel from "./FeatureLabel";
 import css from "./FeaturesList.module.css";
 
-export default function FeaturesList({ camper, limitRows = false }) {
+export default function FeaturesList({ camper, parent }) {
   // Get all available features as simple strings
   const features = [
     camper.transmission,
@@ -22,7 +22,7 @@ export default function FeaturesList({ camper, limitRows = false }) {
   return (
     <div
       className={clsx(css.features, {
-        [css.limitRows]: limitRows,
+        [css.limitRows]: parent === "list",
       })}
     >
       {features.map((feature) => (

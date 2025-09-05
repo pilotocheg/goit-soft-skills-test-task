@@ -1,4 +1,8 @@
-import { formatPrice, formatLocation } from "../../utils/formatters";
+import {
+  formatPrice,
+  formatLocation,
+  formatReviewCount,
+} from "../../utils/formatters";
 import starIconFilled from "../../images/star-filled.svg";
 import mapIcon from "../../images/map.svg";
 
@@ -27,7 +31,7 @@ export default function CamperHeader({ camper, parent }) {
       <div className={css.rating}>
         <img src={starIconFilled} alt="" className={css.icon} />
         <span className={css.ratingText}>
-          {camper.rating}({camper.reviews?.length || 0} Reviews)
+          {camper.rating}({formatReviewCount(camper.reviews?.length || 0)})
         </span>
         <img
           src={mapIcon}

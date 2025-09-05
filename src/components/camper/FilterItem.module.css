@@ -4,22 +4,18 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px;
-  border: 1px solid #dadde1;
+  padding: 4px 12px;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
-  min-height: 80px;
+  transition: border-color 0.3s ease;
+  min-height: 96px;
 }
 
-.filterItem:hover {
-  border-color: #ffc531;
-}
-
+.filterItem:hover,
 .filterItem.active {
-  border-color: #ffc531;
-  background-color: rgba(255, 197, 49, 0.1);
+  border-color: var(--color-primary);
 }
 
 .icon {
@@ -29,9 +25,6 @@
 }
 
 .label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #101828;
+  color: var(--color-text);
   text-align: center;
-  line-height: 1.25;
 }

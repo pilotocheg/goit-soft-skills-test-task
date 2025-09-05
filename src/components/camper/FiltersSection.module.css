@@ -1,0 +1,14 @@
+.sectionTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  margin-top: 24px;
+}

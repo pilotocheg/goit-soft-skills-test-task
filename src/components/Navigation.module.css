@@ -7,8 +7,8 @@
   z-index: 100;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #f2f4f7;
+  background-color: var(--color-background-light);
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .nav {
@@ -27,7 +27,7 @@
 }
 
 .logoLink {
-  color: #101828;
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 900;
   font-size: 20px;
@@ -35,7 +35,7 @@
 }
 
 .logoHighlight {
-  color: #475467;
+  color: var(--color-text-secondary);
 }
 
 .links {
@@ -44,17 +44,17 @@
 }
 
 .link {
-  color: #101828;
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .link:hover {
-  color: #e44d26;
+  color: var(--color-primary);
 }
 
 .link:global(.active) {
-  color: #e44d26;
+  color: var(--color-primary);
   font-weight: 600;
 }

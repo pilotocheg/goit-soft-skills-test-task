@@ -1,6 +1,5 @@
 .camperListContainer {
-  width: 100%;
-  margin-top: 48px;
+  flex: 1;
 }
 
 .camperList {
@@ -13,27 +12,9 @@
 .loadMoreContainer {
   display: flex;
   justify-content: center;
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 .loadMoreButton {
-  padding: 1rem 2rem;
-  background: transparent;
-  border: 1px solid #dadde1;
-  border-radius: 200px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  color: #101828;
-}
-
-.loadMoreButton:hover:not(:disabled) {
-  border-color: #e44d26;
-  color: #e44d26;
-}
-
-.loadMoreButton:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+  min-width: 145px;
 }

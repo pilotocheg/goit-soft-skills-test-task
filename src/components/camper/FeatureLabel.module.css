@@ -4,19 +4,13 @@
   gap: 8px;
   padding: 0 18px;
   height: 48px;
-  background-color: #f7f7f7;
+  background-color: var(--color-border-light);
   border-radius: 100px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.25;
-  color: #101828;
+  color: var(--color-text);
   white-space: nowrap;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
 }
 
 .label {

@@ -1,9 +1,29 @@
+:root {
+  /* colors */
+  --color-primary: #e44848;
+  --color-primary-hover: #d84343;
+  --color-text: #101828;
+  --color-text-secondary: #475467;
+  --color-text-muted: #6c717b;
+  --color-border: #dadde1;
+  --color-border-light: #f2f4f7;
+  --color-background-light: #f7f7f7;
+  --color-background-accent-light: #fff5f4;
+  --color-white: #ffffff;
+
+  /* font-sizes */
+  --font-size-body: 16px;
+
+  /* line-heights */
+  --line-height-body: 1.5;
+}
+
 /* Reset some default styles */
 body {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #101828;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
 }
 
 h1,
